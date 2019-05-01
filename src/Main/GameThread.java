@@ -5,6 +5,7 @@ import java.util.LinkedHashSet;
 
 import physics.Player;
 import physics.Inputs;
+import physics.Map;
 import gui.GamePanel;
 
 public class GameThread extends Thread {
@@ -13,10 +14,12 @@ public class GameThread extends Thread {
 	private GamePanel gamePanel;
 	private static final int WAIT=18; //refresh rate = 18ms
 	private Player player;
+	private Map map;
 	
 	//this is where the game actually runs.
 	public GameThread(GamePanel gamePanel) {
-		
+		this.map = new Map();
+		this.map.initLevel(1);
 		//init player
 		this.player = new Player();
 		
@@ -50,7 +53,7 @@ public class GameThread extends Thread {
 		
 		
 		//run direction
-		if(currentKeys.isEmpty()){
+		if(currentKeys.isEmpty() && !player.getJumping() && !player.getDoubleJumping() && !player.getFalling()){
 			player.stop();
 		} else {
 			//avoid clunky movement when both keys are pressed
@@ -58,28 +61,23 @@ public class GameThread extends Thread {
 					& currentKeys.contains(KeyEvent.VK_LEFT)) { 
 				for (int k : currentKeys) { //whichever key was first pressed will be the direction maintained by player
 					if (k == KeyEvent.VK_RIGHT) {
-						player.move(KeyEvent.VK_RIGHT);
-						break;
+						player.move(KeyEvent.VK_RIGHT);						
 					} else if (k == KeyEvent.VK_LEFT) {
-						player.move(KeyEvent.VK_LEFT);
-						break;
+						player.move(KeyEvent.VK_LEFT);						
 					}
-				}
-			//move right
+				}			
 			} else if (currentKeys.contains(KeyEvent.VK_RIGHT))
-				player.move(KeyEvent.VK_RIGHT);
-			//move left
+				player.move(KeyEvent.VK_RIGHT);			
 			else if (currentKeys.contains(KeyEvent.VK_LEFT))
 				player.move(KeyEvent.VK_LEFT);
 		}
 		
-		player.checkJumpState();
+		if(currentKeys.contains(KeyEvent.VK_SPACE) || currentKeys.contains(KeyEvent.VK_UP)) {	
+			if (!player.getJumping() && !player.getFalling())
+				player.setJumping();
+		}	
 		
-		if(currentKeys.contains(KeyEvent.VK_SPACE) || currentKeys.contains(KeyEvent.VK_UP)) {
-			if(!player.getJumping())
-				player.jump();
-		}
-		
+		player.update();
 	}
 	
 	//return player object

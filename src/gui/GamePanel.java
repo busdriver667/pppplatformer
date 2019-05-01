@@ -20,6 +20,8 @@ public class GamePanel extends JPanel {
 	private Player player;
 	
 	public GamePanel() {
+		this.add(playPanel);
+		playPanel.setLocation(0, 0);
 		this.setRequestFocusEnabled(true);
 		this.setSize(WIDTH, HEIGHT);
 		this.setLayout(null);

@@ -1,0 +1,11 @@
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	terra	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	terra	blank	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	terra	blank	blank	blank	blank	blank	blank	blank	blank
+blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank	blank
+terra	terrL	terra	terra	terra	terra	terra	terrR	blank	blank	terrL	terra	terra	terra	terra	terra	terrR	blank	blank	terrL	terra	terra	terra	terrR
